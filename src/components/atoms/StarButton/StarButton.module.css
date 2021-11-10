@@ -1,0 +1,52 @@
+.button {
+    cursor: pointer;
+    position: relative;
+    height: 60px;
+    width: 60px;
+    border: none;
+    background-color: transparent;
+}
+
+.button::before {
+    top: 0;
+    left: 0;
+    position: absolute;
+    display: block;
+    opacity: 1;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: url(https://www.fdj.fr/weuml/assets/cc1821.svg) transparent
+        no-repeat center 0;
+}
+
+.button::after {
+    top: 0;
+    left: 0;
+    position: absolute;
+    display: block;
+    opacity: 1;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: url(https://www.fdj.fr/weuml/assets/67c0ed.svg) transparent
+        no-repeat center 0;
+}
+
+.unchecked {
+    color: #eebb05;
+}
+.unchecked::before {
+    opacity: 0;
+}
+.checked {
+    color: white;
+}
+.checked::after {
+    opacity: 0;
+}
+
+.star {
+    position: relative;
+    z-index: 1;
+}

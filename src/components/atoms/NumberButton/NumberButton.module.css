@@ -1,0 +1,17 @@
+.button {
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin: 10px;
+    box-shadow: 0 5px 10px 0 #00000080;
+}
+.unchecked {
+    background: white;
+    color: #001367;
+}
+.checked {
+    color: white;
+    background: #001367;
+}
