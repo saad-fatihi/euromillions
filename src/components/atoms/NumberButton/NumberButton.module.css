@@ -14,6 +14,7 @@
 .unchecked:disabled {
     background: #ffffff80;
     color: #00136780;
+    cursor: not-allowed;
 }
 .checked {
     color: white;

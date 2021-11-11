@@ -41,6 +41,7 @@
 }
 .unchecked:disabled {
     color: #eebb0580;
+    cursor: not-allowed;
 }
 .checked {
     color: white;

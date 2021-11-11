@@ -85,3 +85,8 @@
     background: #001367;
     padding: 10px 30px;
 }
+.play:disabled {
+    color: #ffffff80;
+    background: #00136780;
+    cursor: not-allowed;
+}

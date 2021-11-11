@@ -1,6 +1,8 @@
 import React, { Dispatch, useReducer } from "react";
 import styles from "./App.module.css";
 import { NumberGrid, StarGrid } from "./components/molecules";
+import multiples from "./assets/multiples.json";
+import { getPrice } from "./utils";
 
 type AppContextType = StateType & {
     dispatch: Dispatch<ActionType>;
@@ -41,6 +43,8 @@ const reducer = (state: StateType, action: ActionType): StateType => {
 const App = () => {
     const [state, dispatch] = useReducer(reducer, initialState);
 
+    const price = getPrice(state.numbers, state.stars, multiples) || 0;
+
     return (
         <AppContext.Provider value={{ ...state, dispatch }}>
             <h1 className={styles.header}>EuroMillions</h1>
@@ -53,9 +57,17 @@ const App = () => {
                     <StarGrid />
                 </div>
                 <div className={styles.bottom}>
-                    <span className={styles.label}>Mise totale</span>
-                    <span className={styles.price}>0 €</span>
-                    <button className={styles.play}>Jouer</button>
+                    <span className={styles.label}>Mise totale:</span>
+                    <span className={styles.price}>
+                        {price % 100 ? (price / 100).toFixed(2) : price / 100} €
+                    </span>
+                    <button
+                        className={styles.play}
+                        disabled={price === 0}
+                        onClick={() => console.log(state)}
+                    >
+                        Jouer
+                    </button>
                 </div>
             </div>
         </AppContext.Provider>
