@@ -7,7 +7,7 @@ const NumberGrid = () => {
     return (
         <div className={styles.container}>
             {Array.from(Array(50).keys()).map((x) => (
-                <NumberButton value={x + 1} />
+                <NumberButton key={x} value={x + 1} />
             ))}
         </div>
     );

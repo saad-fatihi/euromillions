@@ -39,6 +39,9 @@
 .unchecked::before {
     opacity: 0;
 }
+.unchecked:disabled {
+    color: #eebb0580;
+}
 .checked {
     color: white;
 }

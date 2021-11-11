@@ -7,7 +7,7 @@ const StarGrid = () => {
     return (
         <div className={styles.container}>
             {Array.from(Array(12).keys()).map((x) => (
-                <StarButton value={x + 1} />
+                <StarButton key={x} value={x + 1} />
             ))}
         </div>
     );

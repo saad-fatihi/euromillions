@@ -11,6 +11,10 @@
     background: white;
     color: #001367;
 }
+.unchecked:disabled {
+    background: #ffffff80;
+    color: #00136780;
+}
 .checked {
     color: white;
     background: #001367;
